@@ -7,10 +7,10 @@ module decoder_7seg_tb();
   decoder_7seg decoder(bcd, segment);
 
   initial begin
-    // Change input 0 to 9
+    // Change input 0 to x
     bcd <= 4'b0000;
 
-    repeat(9)
+    repeat(10)
       #1 bcd <= bcd + 4'b0001;
     #1 $finish;
   end
