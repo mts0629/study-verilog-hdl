@@ -3,5 +3,7 @@ module tristate_buffer(in, sel, out);
     input  in, sel;
     output out;
 
-    assign out = sel ? in : 1'bz;
+    // sel = 1: out = in
+    // sel = 0: out = Hi-Z
+    assign out = sel ? (in ? 1 : (~in ? 0 : 1'bx)) : 1'bz;
 endmodule

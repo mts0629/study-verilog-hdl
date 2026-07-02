@@ -7,9 +7,16 @@ module tristate_buffer_tb();
     tristate_buffer buffer(in, sel, out);
 
     initial begin
-        in  <= 1'b1;
+        // out = 0
+        in  <= 1'b0;
         sel <= 1'b1;
         #1;
+
+        // out = 1
+        in  <= 1'b1;
+        #1;
+
+        // out = Hi-Z
         sel <= 1'b0;
         #1;
         $finish;
