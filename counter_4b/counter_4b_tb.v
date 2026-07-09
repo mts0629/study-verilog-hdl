@@ -8,14 +8,19 @@ module counter_4b_tb();
         #(PERIOD / 2) clk = ~clk;
     end
 
+    reg        en;
     reg        rst_n; 
     wire [3:0] count;
 
-    counter_4b counter(clk, rst_n, count);
+    counter_4b counter(clk, en, rst_n, count);
 
     initial begin
+        en    <= 0;
         rst_n <= 0;    // Reset
+
         #2 rst_n <= 1;
+
+        #3 en <= 1;
 
         #32
 
