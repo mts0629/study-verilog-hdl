@@ -6,6 +6,7 @@ Study of Verilog HDL
 
 - Icarus Verilog version 10.1
 - GTKWave Analyzer v3.3.86
+- Yosys 0.7
 
 ## License
 

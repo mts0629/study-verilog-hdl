@@ -1,0 +1,17 @@
+# Read design
+read_verilog $::env(DESIGN)
+
+# Elaborate design hierarchy
+hierarchy
+
+# The high-level stuff
+proc; opt
+
+# Mapping to internal cell library
+techmap; opt
+
+# Cleanup
+clean
+
+# Write synthesized design
+write_verilog synth.v
