@@ -2,7 +2,7 @@
 yosys read_verilog $::env(DESIGN)
 
 # Elaborate design hierarchy
-yosys hierarchy -check
+yosys hierarchy -check -top $::env(TOP_MODULE)
 
 # The high-level stuff
 yosys proc; yosys opt
