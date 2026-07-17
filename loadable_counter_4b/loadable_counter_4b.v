@@ -1,5 +1,5 @@
-// 4-bit lodable counter
-module lodable_counter_4b(clk, load, in, count);
+// 4-bit loadable counter
+module loadable_counter_4b(clk, load, in, count);
     input        clk;   // Clock signal
     input        load;  // Load enable signal
     input  [3:0] in;    // Load input value
