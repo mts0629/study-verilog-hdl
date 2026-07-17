@@ -9,6 +9,9 @@ module ud_counter_4b(clk, up, down, rst_n, count, carry, borrow);
     reg    [3:0] count;
     wire         carry, borrow;
 
+    assign carry  = ((count == 9) && up && !down) ? 1 : 0;
+    assign borrow = ((count == 0) && !up && down) ? 1 : 0;
+
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             count <= 0;

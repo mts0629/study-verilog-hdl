@@ -18,16 +18,15 @@ module ud_counter_4b_tb();
     );
 
     initial begin
-        rst_n  <= 1;
+        rst_n  <= 0;
         up     <= 1;
         down   <= 0;
 
-        #1 rst_n <= 0;
         #1 rst_n <= 1;
 
         #20;
 
-        up <= 0;
+        up   <= 0;
         down <= 1;
 
         #20;
