@@ -1,11 +1,10 @@
 // 4-bit up/down counter
 module ud_counter_4b(clk, up, down, rst_n, count, carry, borrow);
-    input        clk;      // Clock
-    input        up, down; // Up/down
-    input        rst_n;    // Reset
-    output [3:0] count;    // Output
-    input        carry;    // Carry
-    input        borrow;   // Borrow
+    input        clk;           // Clock
+    input        up, down;      // Up/down
+    input        rst_n;         // Reset
+    output [3:0] count;         // Output
+    output       carry, borrow; // Carry, borrow
 
     reg    [3:0] count;
     wire         carry, borrow;
