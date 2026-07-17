@@ -1,5 +1,5 @@
 // 4-bit adder
-module adder4b(in1, in2, out, cy);
+module adder_4b(in1, in2, out, cy);
     input  [3:0] in1, in2; // Inputs
     output [3:0] out;      // Output
     output       cy;       // Carry

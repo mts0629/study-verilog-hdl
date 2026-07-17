@@ -2,12 +2,12 @@
 `timescale 1 ns/100 ps
 
 // Test bench for 4-bit adder
-module adder4b_tb();
+module adder_4b_tb();
     reg   [3:0] in1, in2;
     wire  [3:0] result;
     wire        cy;
 
-    adder4b adder(in1, in2, result, cy);
+    adder_4b adder(in1, in2, result, cy);
 
     initial begin
         // Initial inputs
