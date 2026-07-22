@@ -2,7 +2,7 @@
 module sram(addr, data, cs, rd, wr);
     input [9:0] addr;       // Address
     input       rd, cs, wr; // Read, chip select, write
-    input [7:0] data;       // Data (input/output)
+    inout [7:0] data;       // Data (input/output)
 
     wire [9:0] addr;
     wire       rd, cs, wr;
